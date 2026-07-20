@@ -8,5 +8,9 @@ print(shipment_id)
 print(product_id)
 """
 
+
+print(new_data_path)
 for i in range(10):
     print(i)
+
+
