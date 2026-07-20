@@ -2,6 +2,7 @@
 import pandas as pd
 import numpy as np
 from script.utility.step_by_step_logging import logging
+from script.utility.file_path import new_data_path
 
 product_level_shipment_data = {
     "shipment_date" : ['2026-01-01','2026-01-01']
@@ -16,7 +17,7 @@ product_level_shipment_data = {
 
 def create_product_level_shipment_details_table() -> pd.DataFrame:
     df = pd.DataFrame(product_level_shipment_data)
-    df.to_csv("data/input_data/product_level_shipment_details_table.csv", index=False)
+    df.to_csv(new_data_path.get('product_level_shipment_details_table'), index=False)
     logging.info("Product level shipment-id details table is created successfully.")
     return df
 
