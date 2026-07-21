@@ -1,7 +1,2 @@
-removal_date,removal_id,product_code,removal_quantity
-2026-01-04,rm1,7GDMQCI9KP,2
-2026-01-05,rm2,RZCVBPAUWU,1
-2026-01-06,rm3,RZCVBPAUWU,1
-2026-01-04,rm1,7GDMQCI9KP,2
-2026-01-05,rm2,RZCVBPAUWU,1
-2026-01-06,rm3,RZCVBPAUWU,1
+removal_date,removal_id,product_code,removal_quantity,shipment_id_mapped
+2026-01-10,rm6,4PRTSJVE8WE,8,

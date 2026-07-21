@@ -2,19 +2,18 @@
 
 import pandas as pd
 from typing import Dict
+from script.utility.file_path import input_data_path
+from script.utility.read_and_write_file import read_write_data
 
-dict_data = {
-"shipment_detail_path" : 'data/input_data/product_level_shipment_details_table.csv'
-,"removal_detail_path" : 'data/input_data/removal_order_details_table.csv'
-,"current_stock_path" : 'data/input_data/current_stock_details_table.csv'
-,"order_path" : 'data/input_data/order_details_table.csv'
-}
 
-def list_of_data_required_for_processing(items: Dict) -> Dict:
+def load_input_data(items: Dict) -> Dict:
     data_list = dict()
     for item in items:
-        data_list[item] = pd.read_csv(dict_data[item])
+        data_list[item] = read_write_data().read_data(items.get(item))
     return data_list
+
+lid = load_input_data(input_data_path)
+current_stock_data, order_data,  shipment_detail_data, removal_detail_data  = lid.values()
 
 """
 data_list = list_of_data_required_for_processing(dict_data) 

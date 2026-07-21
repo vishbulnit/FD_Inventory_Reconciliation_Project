@@ -1,1 +1,1 @@
-shipment_date,shipment_id,product_code,shipped_quantity,received_quantity,order,removal,current_stock
+shipment_date,shipment_id,product_code,shipped_quantity,received_quantity,order,removal,current_stock,difference

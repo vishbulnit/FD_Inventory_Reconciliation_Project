@@ -6,8 +6,11 @@ from script.utility.initial_input_data_generation.order_details import create_or
 from script.utility.file_path import new_data_path, input_data_path, output_data_path
 from script.utility.read_and_write_file import read_write_data
 
+
+# When we receive new data, where do we want to update this.
 class new_data_movement:
 
+    # This function will update only new data
     def update_new(self) -> None:
         
         create_product_level_shipment_details_table()
@@ -17,6 +20,8 @@ class new_data_movement:
         
         return None
 
+    # This function will updated both; input and output data that will be used for process
+    # Idealy, this function will be executed only once when program run first time
     def update_input_output(self) -> None:
         
         new_df = []
@@ -37,7 +42,7 @@ class new_data_movement:
 
 ndm = new_data_movement()
 ndm.update_new()
-ndm.update_input_output()
+## ndm.update_input_output()
 
 """
 df = read_data(new_data_path.get('current_stock_details_table'))
